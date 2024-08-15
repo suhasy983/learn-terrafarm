@@ -8,6 +8,14 @@ resource "aws_instance" "frontend" {
   }
 }
 
+resource "aws_route53_record" "frontend" {
+  zone_id = "Z02540113N1Z961N7HMWN"
+  name    = "frontend.dev.sydevops80.online"
+    type    = "A"
+  ttl     = 15
+  records = [aws_instance.frontend.private_ip]
+}
+
 resource "aws_instance" "mongo" {
   ami           = "ami-041e2ea9402c46c32"
   instance_type = "t3.micro"
@@ -18,6 +26,14 @@ resource "aws_instance" "mongo" {
   }
 }
 
+resource "aws_route53_record" "mongo" {
+  zone_id = "Z02540113N1Z961N7HMWN"
+  name    = "mongo.dev.sydevops80.online"
+  type    = "A"
+  ttl     = 15
+  records = [aws_instance.mongo.private_ip]
+}
+
 resource "aws_instance" "catalouge" {
   ami           = "ami-041e2ea9402c46c32"
   instance_type = "t3.micro"
@@ -26,4 +42,12 @@ resource "aws_instance" "catalouge" {
   tags = {
     Name = "catalouge_dev"
   }
+}
+
+resource "aws_route53_record" "catalouge" {
+  zone_id = "Z02540113N1Z961N7HMWN"
+  name    = "catalouge.dev.sydevops80.online"
+  type    = "A"
+  ttl     = 15
+  records = [aws_instance.catalouge.private_ip]
 }
