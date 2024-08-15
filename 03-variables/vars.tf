@@ -49,5 +49,5 @@ output "l" {
 }
 
 output "m" {
-  value = "course name - ${var.m[course]} , trainer name - ${var.m[trainer]}"
+  value = "course name - ${var.m["course"]} , trainer name - ${var.m["trainer"]}"
 }
