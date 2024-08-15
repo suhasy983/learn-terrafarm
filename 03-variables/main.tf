@@ -4,7 +4,7 @@ variable "name" {
 
 #outputs:
 output "name" {
-  value = "var.name"
+  value = var.name
 }
 
 variable "x" {
