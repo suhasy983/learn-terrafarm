@@ -57,6 +57,7 @@ output "m" {
 }
 
 # empty variable value ask on prompt Or you can provide with CLI  with  arg   -var c=100
+# cd ..;git pull;cd 03-variables;terraform init;terraform plan -var c=100
 variable "c" {
   type = number
 }
