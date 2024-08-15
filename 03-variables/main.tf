@@ -10,3 +10,7 @@ variable "x" {
 output "x" {
   value = var.x
 }
+
+output "name" {
+  value = "var.name"
+}
