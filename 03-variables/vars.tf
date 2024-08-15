@@ -55,3 +55,12 @@ output "l" {
 output "m" {
   value = "course name - ${var.m["course"]} , trainer name - ${var.m["trainer"]}"
 }
+
+# empty variable value ask on prompt Or you can provide with CLI  with  arg   -var c=100
+variable "c" {
+  type = number
+}
+
+output "c" {
+  value = var.c
+}
