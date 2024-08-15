@@ -20,6 +20,14 @@ variable "l" {
 }
 # values in list need not to be same data type
 
+#map variables
+
+variable "m" {
+  default = {
+    course = devops
+    trainer = john
+  }
+}
 
 #outputs:
 # Direct values does not require to be accessed with ${}
@@ -36,3 +44,10 @@ output "x1" {
   value = "Value of x - ${var.x}"
 }
 
+output "l" {
+  value = var.l[0]
+}
+
+output "m" {
+  value = "course name - ${var.m[course]} , trainer name - ${var.m[trainer]}"
+}
