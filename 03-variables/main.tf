@@ -2,6 +2,11 @@ variable "name" {
  default = "abc"
 }
 
+#outputs:
+output "name" {
+  value = "var.name"
+}
+
 variable "x" {
   default = 10
 }
@@ -11,6 +16,3 @@ output "x" {
   value = var.x
 }
 
-output "name" {
-  value = "var.name"
-}
