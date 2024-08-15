@@ -24,8 +24,8 @@ variable "l" {
 
 variable "m" {
   default = {
-    course = devops
-    trainer = john
+    course =  "devops"
+    trainer = "john"
   }
 }
 
