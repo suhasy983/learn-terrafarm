@@ -6,6 +6,6 @@ variable "component" {
   default = ["frontend", "catalouge", "mongo"]
 }
 
-resource "null_resource" "test" {
+resource "null_resource" "test1" {
   count = length(var.component)
 }
