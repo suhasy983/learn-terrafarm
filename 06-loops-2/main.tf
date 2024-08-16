@@ -1,6 +1,5 @@
 resource "null_resource" "fruits" {
   for_each = var.fruits
-
 }
 
 variable "fruits" {
@@ -14,5 +13,17 @@ variable "fruits" {
       quantity = 40
 
     }
+  }
+}
+
+resource "null_resource" "instances" {
+  for_each = var.instances
+}
+
+variable "instances" {
+  default = {
+    frontend = {}
+    catalouge = {}
+    mongo = {}
   }
 }
