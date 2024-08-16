@@ -3,7 +3,7 @@ resource "null_resource" "test" {
 }
 
 variable "component" {
-  default = {"frontend", "catalouge", "mongo"}
+  default = ["frontend", "catalouge", "mongo"]
 }
 
 resource "null_resource" "test" {
