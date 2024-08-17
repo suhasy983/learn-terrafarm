@@ -1,4 +1,4 @@
-#keeping state file at remote location
+#keeping state file at remote location.
 
 resource "null_resource" "test" {}
 
