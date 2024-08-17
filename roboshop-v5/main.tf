@@ -21,6 +21,7 @@ resource "aws_route53_record" "dns_record" {
 resource "null_resource" "ansible" {
   depends_on = [aws_route53_record.dns_record]
   for_each = var.component
+
   provisioner "remote-exec" {
     connection {
       user = "ec2-user"
