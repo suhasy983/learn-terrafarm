@@ -29,7 +29,7 @@ resource "null_resource" "ansible" {
     }
 
     inline = [
-      "sudo pip-3.11 install ansible"
+      "sudo pip-3.11 install ansible",
       "ansible-pull -i localhost, -U https://github.com/suhasy983/roboshop-ansible -e env=dev -e role_name=${each.key}"
     ]
 
