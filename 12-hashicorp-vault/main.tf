@@ -1,5 +1,9 @@
 variable "vault_token" {}
 
+data "vault_generic_secret" "rundeck_auth" {
+  path = "kv/Test-secret"
+}
+
 provider "vault" {
   address         = "https://vault-internal.sydevops80.online:8200"
   token           = var.vault_token
@@ -11,9 +15,6 @@ resource "local_file" "foo" {
   filename = "/tmp/foo.bar"
 }
 
-data "vault_generic_secret" "rundeck_auth" {
-  path = "kv/Test-secret"
-}
 
 output "test" {
   value = data.vault_generic_secret.rundeck_auth.data["MYPASS"]
