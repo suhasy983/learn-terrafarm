@@ -5,11 +5,11 @@ variable "domain_name" {
 variable "component" {
   default = {
     frontend = {}
-    catalouge = {}
+    catalogue = {}
     mongo = {}
     redis = {}
     rabbitmq = {}
-    mssql = {}
+    mysql = {}
     payment = {}
     shipping = {}
     user = {}
