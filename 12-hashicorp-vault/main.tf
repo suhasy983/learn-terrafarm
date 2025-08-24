@@ -5,7 +5,7 @@ data "vault_generic_secret" "rundeck_auth" {
 }
 
 provider "vault" {
-  address         = "https://vault-internal.sydevops80.online:8200"
+  address         = "https://vault-internal.sy80devops.online:8200"
   token           = var.vault_token
   skip_tls_verify = true
 }

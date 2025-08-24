@@ -4,7 +4,7 @@ resource "null_resource" "test" {}
 
 terraform {
   backend "s3" {
-    bucket = "dsy80-terraform"
+    bucket = "syd80-terraform"
     key = "test/terraform.tfstate"
     region = "us-east-1"
   }

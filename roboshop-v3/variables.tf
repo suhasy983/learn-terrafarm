@@ -14,7 +14,7 @@ variable "zone_id" {
 }
 
 variable "domain_name" {
-  default = "sydevops80.online"
+  default = "sy80devops.online"
 }
 
 variable "component" {
