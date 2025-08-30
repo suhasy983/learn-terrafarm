@@ -4,6 +4,14 @@ resource "aws_instance" "instance" {
   instance_type = "t3.small"
   vpc_security_group_ids = data.aws_security_groups.sg.ids
 
+  instance_market_options {
+      market_type = "spot"
+      spot_options {
+        instance_interruption_behavior = "stop"
+        spot_instance_type             = "persistent"
+      }
+    }
+
   tags = {
     Name = "${each.key}.dev"
   }
